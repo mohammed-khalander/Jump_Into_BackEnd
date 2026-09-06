@@ -1,7 +1,7 @@
 /**
  * How to Use EJS
  * 1.) install - npm i ejs@latest
- * 2.) We have to Set view engine in index.js by telling (app.est("view engine","ejs"))
+ * 2.) We have to Set view engine in index.js by telling (app.set("view engine","ejs"))
  * 3.) Then create View Folder then 'ejs' files in that and write html there (basically 'ejs')
  * 4.) We have to Set views in index.js by telling (app.set("views",path.resolve("./views")))
  * 5.) Afterwards Instead of rendering hanldeGetAllUrls in url/ (get Request Page) change it to 

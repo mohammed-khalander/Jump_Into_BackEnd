@@ -15,7 +15,7 @@ const storage = multer.diskStorage({
     cb(null, safeName)
   }
 })
-
+// Don't forget to write this in 'form' "enctype="multipart/form-data" 
 const upload = multer({ storage: storage })
 
 

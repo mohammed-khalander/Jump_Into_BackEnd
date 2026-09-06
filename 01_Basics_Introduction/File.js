@@ -1,10 +1,10 @@
-// // import fs from "fs";
+// import fs from "fs";
 // const fs = require("fs");
 // const path = require("path");
-// //Both above declarations are valid
+//Both above declarations are valid
 
 
-// // console.log(fs);
+// console.log(fs);
 // const filePath = path.join(__dirname,"test.js");
 
 
@@ -28,6 +28,8 @@ const fs = require("fs");
 
 //Asynchronous
 // fs.writeFile('./test.txt',"Hello There, this is aysnchronous",(error)=>{});
+
+
 
 
 const path = require("path");

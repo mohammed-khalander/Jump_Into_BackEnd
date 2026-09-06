@@ -42,7 +42,7 @@ const filePath = path.join(__dirname,"log.txt");
 
 
 const myServer = http.createServer((req,res)=>{
-    // console.log("Request is Recived from from the uer to SERVER");
+    // console.log("Request is Recived from from the user to SERVER");
     // console.log(req.headers);
     // console.log(req.socket.remoteAddress);
     const userIP = req.socket.remoteAddress;
@@ -153,7 +153,7 @@ myServer.listen(PORT,()=>{
 
 
 
-/*
+
 
 const http = require("http");
 const fs = require("fs");
@@ -171,11 +171,18 @@ const myServer = http.createServer((req,res)=>{
     // if(url==='/favicon.ico'){
     //     res.end();
     // }
-    console.log(url);
+    console.log("URL Library",url);
+    console.log("Request URL",myUrl);   // o/p :- "/"
+    /**
+     * Everytime when we hit the server, these logs are coming 3 times, meaing 3 different things are hitting the server, when we go to any particular route,
+     *      1.) Our Request  ('/')
+     *      2.) Request by DevTools ('/.well-known/appspecific/com.chrome.devtools.json')
+     *      2.) Request by FavIcons ('/favicon.ico')
+     */
     // console.log(url.parse(myUrl));
     // myUrl = url.parse(myUrl);
     myUrl = url.parse(myUrl,true);      // Here 'true' separates the Query Parameters which are parsed
-    console.log(myUrl);
+    console.log("URL after parsing with Library URL",myUrl);
     if(myUrl.path!=='/favicon.ico'){
         console.log(myUrl);
     }
@@ -216,5 +223,4 @@ myServer.listen(8000,()=>{
 
 
 
-*/
 

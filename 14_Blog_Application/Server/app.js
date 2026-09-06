@@ -38,6 +38,8 @@ app.use(express.urlencoded({ extended:false }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));  //Middleware to use 'public' folder detials in 'ejs' files
+// app.use(express.static('public'));
+
 
 app.use("/",staticRouter);
 app.use('/user',userRouter);

@@ -33,7 +33,7 @@ const PORT = 8000;
 
 
 //          The following is the middleware used in Previous CURD project
-//              *   app.use(express.urlencoded({ extended:false }));
+//              *   app.use(express.urlencoded({ extended:false }));        // We can also think of it like it's used for "parsing" 
 
 // The above function calls next thing and it will go to the further 'MiddleWaress' (If any) or to the Further Routes
 

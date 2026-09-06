@@ -131,7 +131,7 @@ app.post("/api/users", async (req,res)=>{
     }).catch((err)=>{
         if(err.code==11000){
             console.log("Found Duplicate Entry");
-            return res.status(400).json({message:"Duplicate Fields are now allowed"});
+            return res.status(400).json({message:"Duplicate Fields are not allowed"});
         }
         console.log("Internal Server Error");
         return res.status(500).json({message:"Internal Server Error"});
@@ -184,7 +184,7 @@ app.listen(PORT,()=>{
 
 
 
-/**                                                          MVC Pattern (Modern View Controller)
+/**                                                          MVC Pattern (Model View Controller)
  * 
  * ----> 'Controllers' manipulates the 'model'
  * ----> And Modle update the 'View'
